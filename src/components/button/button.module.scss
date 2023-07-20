@@ -1,0 +1,26 @@
+.button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background: var(
+    --golden-grad,
+    linear-gradient(180deg, #e2c761 0%, #a3781a 100%)
+  );
+  color: #fff;
+  text-align: right;
+  font-family: "Inter";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 166.667% */
+  text-transform: uppercase;
+
+  &:hover {
+    background: var(--golden-1, #e2c761);
+  }
+
+  &:focus {
+    // border-radius: 4px;
+    background: var(--golden-2, #a3781a);
+  }
+}

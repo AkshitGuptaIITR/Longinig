@@ -1,0 +1,127 @@
+.footer {
+  padding: 0 18px;
+  .footer_cont {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 40px 0;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    .logo {
+      width: 64px;
+    }
+
+    .follow {
+        margin-top: 20px;
+      p {
+        margin: 0;
+        margin-bottom: 10px;
+        color: #fff;
+        font-family: "Poppins";
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+
+      div {
+        display: flex;
+        gap: 24px;
+        img {
+          width: 28px;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .other_links {
+      margin-top: 16px;
+      p {
+        margin: 0;
+        color: #fff;
+        font-family: "Montserrat";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+      p:nth-child(1) {
+        margin-bottom: 24px;
+        font-size: 12px;
+        font-weight: 600;
+      }
+      p:nth-child(2) {
+        margin-bottom: 16px;
+      }
+    }
+
+    .contact_us {
+      margin-top: 16px;
+      p {
+        margin: 0;
+        color: #fff;
+        font-family: "Montserrat";
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+      p:nth-child(1) {
+        margin-bottom: 24px;
+        font-weight: 600;
+      }
+      .email {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        img {
+          width: 16px;
+        }
+      }
+    }
+
+    // .rights {
+    //   margin-top: 18px;
+    //   p {
+    //     text-align: center;
+    //     margin: 0;
+    //     color: #fff;
+    //     font-family: "Montserrat";
+    //     font-size: 10px;
+    //     font-style: normal;
+    //     font-weight: 400;
+    //     line-height: normal;
+    //   }
+    // }
+  }
+  .rights {
+    margin-top: 18px;
+    p {
+      text-align: center;
+      margin: 0;
+      color: #fff;
+      font-family: "Montserrat";
+      font-size: 10px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .footer {
+    padding: 0 83px;
+    padding-bottom: 20px;
+    .footer_cont {
+        padding-bottom: 60px;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .follow{
+        margin-top: 10px;
+      }
+    }
+  }
+}
