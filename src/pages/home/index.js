@@ -66,11 +66,11 @@ const infoCard3Content = [
 const Home = () => {
   const [showCont1, setShowCont1] = useState(false);
   const [showCont2, setShowCont2] = useState(false);
+  const [showCont3, setShowCont3] = useState(false);
   const isDesktopOrTablet = useMediaQuery({ minWidth: 768 });
 
   useEffect(() => {
     window.addEventListener("scroll", (event) => {
-      //   console.log(window.scrollY);
       if (isDesktopOrTablet) {
         if (window.scrollY > 400) {
           setShowCont1(true);
@@ -82,16 +82,24 @@ const Home = () => {
         } else {
           setShowCont2(false);
         }
+
+        if (window.scrollY > 1400) {
+          setShowCont3(true);
+        }
       } else {
         if (window.scrollY > 600) {
           setShowCont1(true);
         } else {
           setShowCont1(false);
         }
-        if (window.scrollY > 1800) {
+        if (window.scrollY > 2000) {
           setShowCont2(true);
         } else {
           setShowCont2(false);
+        }
+
+        if (window.scrollY > 2500) {
+          setShowCont3(true);
         }
       }
     });
@@ -168,9 +176,10 @@ const Home = () => {
         <div className={styles.infoCont_3}>
           <h1>What's Included in Your Subscription</h1>
           <div className={styles.infoCont_3_cont}>
-            {infoCard3Content.map((item, key) => {
-              return <InfoCard3 content={item} key={key} />;
-            })}
+            {showCont3 &&
+              infoCard3Content.map((item, key) => {
+                return <InfoCard3 content={item} key={key} />;
+              })}
           </div>
           <button
             onClick={() => {
@@ -243,7 +252,9 @@ const InfoCard2 = ({ number, content }) => {
 
 const InfoCard3 = ({ content }) => {
   return (
-    <div className={styles.infoCard3}>
+    <div
+      className={`${styles.infoCard3} animate__animated animate__fadeInLeft`}
+    >
       <img src={Tick} />
       <p>{content}</p>
     </div>
