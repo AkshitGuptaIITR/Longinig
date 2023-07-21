@@ -15,6 +15,7 @@ import WebBuyingStats from "../../assets/background/web_buying_stats.png";
 import { useMediaQuery } from "react-responsive";
 import "animate.css";
 import Button from "../../components/button";
+import mockup from "../../assets/background/mockup.png";
 
 const infoCard1Content = [
   {
@@ -196,7 +197,7 @@ const Home = () => {
               Join Our Flourishing Community of Satisfied Traders - Trusted and
               Loved by Many!
             </h1>
-            {isDesktopOrTablet && (
+            {isDesktopOrTablet ? (
               <div className={styles.buyBanner}>
                 <h3>Don't Miss the Profit Train</h3>
                 <div className={styles.buyBannerContent}>
@@ -219,9 +220,77 @@ const Home = () => {
                   </Button>
                 </div>
               </div>
+            ) : (
+              <div
+                className={`${styles.buyBanner} ${styles.mobile}`}
+                style={{
+                  position: "fixed",
+                  bottom: 20,
+                  color: "white",
+                  display: "flex",
+                  borderRadius: "16px",
+                  border: "1px solid white",
+                  width: "80%",
+                  justifyContent: "space-between",
+                  flexDirection: "row",
+                  background: "#232323",
+                  alignItems: "center",
+                  padding: "12px 12px",
+                  zIndex: 100,
+                }}
+              >
+                <div className={styles.buyBannerContent}>
+                  <h3 style={{ fontSize: 12 }}>Don't Miss the Profit Train</h3>
+                  <div
+                    className={styles.price}
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      alignItems: "center",
+                      justifyContent: "space-between",
+                      width: "90%",
+                    }}
+                  >
+                    <h2
+                      style={{
+                        color: "#e2c761",
+                        display: "flex",
+                        fontSize: "20px",
+                        justifyContent: "space-between",
+                        margin: 0,
+                      }}
+                    >
+                      ₹ 1499 /-
+                    </h2>
+                    <div>
+                      <p style={{ margin: 0, fontSize: 8 }}>50% off</p>
+                      <p style={{ margin: 0, fontSize: 12 }}>
+                        <s>₹ 3999 /-</s>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <Button
+                  onClick={() => {
+                    window.location.href =
+                      "https://cosmofeed.com/vp/6453abd5346dc300206c1eba";
+                  }}
+                  style={{
+                    width: "fit-content",
+                    height: "fit-content",
+                    fontSize: 12,
+                  }}
+                >
+                  SUBSCRIBE Now
+                </Button>
+              </div>
             )}
           </div>
-          <img src={isDesktopOrTablet ? WebBuyingStats : BuyingStats} />
+          <img
+            src={isDesktopOrTablet ? WebBuyingStats : mockup}
+            style={{ width: !isDesktopOrTablet && "100%" }}
+            alt=""
+          />
         </div>
       </div>
       <Footer />
@@ -232,7 +301,7 @@ const Home = () => {
 const InfoCard1 = ({ img, heading, content }) => {
   return (
     <div className={`${styles.infoCard1} animate__animated animate__fadeInUp`}>
-      <img src={img} />
+      <img src={img} alt="" />
       <h2>{heading}</h2>
       <p>{content}</p>
     </div>

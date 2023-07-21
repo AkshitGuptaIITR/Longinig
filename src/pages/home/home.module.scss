@@ -223,7 +223,7 @@
         text-transform: uppercase;
 
         &:hover {
-            color: #FFF;
+          color: #fff;
           background: var(
             --golden-grad,
             linear-gradient(180deg, #e2c761 0%, #a3781a 100%)
@@ -501,6 +501,7 @@
     }
   }
 
+  
   .infoCard1 {
     width: 400px !important;
   }
