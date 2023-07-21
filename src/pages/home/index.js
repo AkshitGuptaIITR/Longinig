@@ -226,11 +226,12 @@ const Home = () => {
                 style={{
                   position: "fixed",
                   bottom: 20,
+                  left: 16,
                   color: "white",
                   display: "flex",
                   borderRadius: "16px",
-                  border: "1px solid white",
-                  width: "80%",
+                  border: "1px solid #4f4f4f",
+                  width: "84%",
                   justifyContent: "space-between",
                   flexDirection: "row",
                   background: "#232323",
@@ -279,6 +280,7 @@ const Home = () => {
                     width: "fit-content",
                     height: "fit-content",
                     fontSize: 12,
+                    padding: 10
                   }}
                 >
                   SUBSCRIBE Now
