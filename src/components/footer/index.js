@@ -26,7 +26,7 @@ const Footer = () => {
               <img
                 src={Telegram}
                 onClick={() => {
-                  window.location.href = "https://t.me/OM0111";
+                  window.location.href = "https://t.me/longing101";
                 }}
               />
               <img
